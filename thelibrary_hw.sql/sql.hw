@@ -85,14 +85,13 @@ group by 1
 order by round (avg(total_score)) asc
  
 --Q13: Count how many students got each score, only for scores above 30, ordered by frequency.
-SELECT
+select
 distinct total_score,
-COUNT(total_score) AS COUNT_OF_EACH_SCORE
-FROM
-day_1_exam
-WHERE total_score > 30
-GROUP BY total_score
-ORDER BY total_score 
+count(total_score) AS COUNT_OF_EACH_SCORE
+from day_1_exam
+where total_score > 30
+group by total_score
+order by total_score 
 
 --Q14: Get total marks sum for each result status, ordered by sum.
 select
